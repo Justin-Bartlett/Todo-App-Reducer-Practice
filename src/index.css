@@ -55,7 +55,7 @@ body {
 }
 
 #root {
-  width: 1126px;
+  width: 1260px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -63,6 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  align-items: center;
 }
 
 ul {
@@ -99,15 +100,28 @@ p {
 }
 
 .content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-list-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #todo-textarea {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: block;
   justify-self: center;
+  margin-bottom: 1em;
 }
 
 .todo-list {
+  width: 20em;
   margin: 1em;
   background-color: #2e303a;
   padding: 0.5em;

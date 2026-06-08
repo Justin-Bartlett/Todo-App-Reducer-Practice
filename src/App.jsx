@@ -1,16 +1,19 @@
 import Counter3 from "./components/Counter3"
 import TodoList from "./components/TodoList"
+import CounterContextProvider from "./store/counterContext"
 
 import TodosContextProvider from "./store/todosContext"
 
 function App() {
   return (
-    <TodosContextProvider>
-      <Counter3 />
-      <main className="content">
+    <main className="content">
+      <CounterContextProvider>
+        <Counter3 />
+      </CounterContextProvider>
+      <TodosContextProvider>
         <TodoList />
-      </main>
-    </TodosContextProvider>
+      </TodosContextProvider>
+    </main>
   )
 }
 

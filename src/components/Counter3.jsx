@@ -1,42 +1,29 @@
-import { useReducer } from "react"
-
-function counterReducer(state, action) {
-  switch (action.type) {
-    case "dec": {
-      return {
-        counter: state.counter - 1,
-      }
-    }
-    case "inc": {
-      return {
-        counter: state.counter + 1,
-      }
-    }
-  }
-}
+import { useContext } from "react"
+import { CounterContext } from "../store/counterContext"
 
 export default function Counter3() {
-  const [state, dispatch] = useReducer(counterReducer, { counter: 0 })
+  const { counter, decrementCounter, incrementCounter } =
+    useContext(CounterContext)
   return (
     <>
       <section>
         <div>Counter3</div>
         <button
           onClick={() => {
-            dispatch({ type: "dec" })
+            decrementCounter()
           }}
         >
           Decrement
         </button>
         <button
           onClick={() => {
-            dispatch({ type: "inc" })
+            incrementCounter()
           }}
         >
           Increment
         </button>
       </section>
-      <p>{state.counter}</p>
+      <p>{counter}</p>
     </>
   )
 }

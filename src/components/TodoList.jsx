@@ -21,7 +21,7 @@ export default function TodoList() {
 
   return (
     <>
-      <section className="input">
+      <section className="todo-list-input">
         <h1>TodoList</h1>
         <textarea ref={todoRef} id="todo-textarea" rows="4" cols="40" />
         <button onClick={handleAddNewTodo}>Add new todo</button>
