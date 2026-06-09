@@ -115,9 +115,10 @@ p {
 
 #todo-textarea {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  resize: none;
   display: block;
   justify-self: center;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 .todo-list {
